@@ -1,1 +1,11 @@
-/oldcode
+*.pyc
+__pycache__/
+*.pkl
+dist/
+build/
+wholemail.egg-info/
+*.bat
+myvenv/
+test_data/
+*.devnote
+**my_email_auth.py

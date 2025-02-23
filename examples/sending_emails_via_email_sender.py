@@ -1,26 +1,3 @@
-Logo
-
-
-# Introduction
-
-
-# Usage
-
-Contents
-
-Sending emails via GMAIL
-Working with the EmailWorker class
-Working with the EmailTemplate class 
-Sending an EmailTemplate class using an EmailWorker class
-Sending a generic email verification email
-Sending a generic authentication code email
-Using the  EmailWorker to authenticate codes
-
-## Sending emails via GMAIL
-- You can send html and plain text messages using the EmailSender class
-- Here is a demonstration
-
-```python
 
 from wholemail import GmailSender
 
@@ -42,15 +19,3 @@ plain_message = "Hello there" # alternative message to the html , it is optional
 
 sender.SendHTMLEmail( recipient , subject ,html_code , plain_message = plain_message )
 # This will send an html email to the recipient
-
-```
-
-
-# Release notes
-
-
-# Contributing
-Needed features
-
-
-# Thanks
