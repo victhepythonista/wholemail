@@ -16,3 +16,8 @@
 
 - Added gmail app password instructions to the readme
 - Updated the README badges
+
+## VERSION v.0.1.5
+
+- Nothing much , just more tests and readme updates
+
