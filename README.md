@@ -1,7 +1,7 @@
 
  
 <p align="center">
-    <img  src="https://i.ibb.co/Vc2TxTDC/wholemail-logo300.png"
+    <img  src="https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png"
          alt="Logo">
  
 </p>
