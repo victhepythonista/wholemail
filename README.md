@@ -85,7 +85,7 @@ python -m pip install --upgrade wholemail
 
 # Usage
 
-			            Contents
+			       
 
 -  Sending emails via GMAIL
 -    Working with the EmailTemplate class 
@@ -99,7 +99,6 @@ python -m pip install --upgrade wholemail
 
 ### Sending emails via GMAIL
 
-[^sending_emails_via_gmail]:
 
 - You can send html and plain text messages using the EmailSender class
 - Here is a demonstration
@@ -131,7 +130,6 @@ sender.SendHTMLEmail( recipient , subject ,html_code , plain_message = plain_mes
 
 ### Working with the EmailTemplate class
 
-[^working_with_the_email_template_class]:
 
 - The EmailTemplate class represents the email you wish to send .
 - It contains the text message or html code that will make up the email . 
@@ -153,7 +151,6 @@ template = EmailTemplate( html , context = context , name = "hello-email")
 
 ### Working with the EmailWorker class
 
-[^working_with_the_email_worker_class]:
 
 - The EmailWorker class is primarily  used to send email templates and verify email codes 
 
@@ -184,7 +181,6 @@ worker.SendTemplate( template , subject , recipient_email )
 
 ### Sending a generic email verification email
 
-[^sending_a_generic_email_verification_email]:
 
 - Email verification through a link sent to your email is a common practice across the web.
 - The **BasicEmailVerificationEmailTemplate** is an child of the EmailTemplate class that is made to simplify this common practice of verifying emails .
@@ -229,7 +225,6 @@ worker.SendTemplate( template , "Email subject "  , "recipient@gmail.com")
 
 ###  Sending a generic authentication code email
 
-[^sending_generic_auth_code_email]:
 
 - Another common email is the verification code or one-time-password (OTP) email 
 - They are mostly used to authenticate an action on a website or a sign up process
@@ -274,7 +269,6 @@ Here is the result of the email sent
 
 ### Using the  EmailWorker to authenticate codes
 
-[^using_EmailWorker_to_authenticate_codes]:
 
 - If you wish to generate and authenticate codes sent to user emails , the EmailWorker class can be used to do so.
 - Here is an example
@@ -334,7 +328,6 @@ is_valid_code = worker.VerifyCode(code)
 
 ### Using in a Django view
 
-[^using_wholemail_in_django]:
 
 - If you use the Django framework, here is an example of using the wholemail library in a view .
 
