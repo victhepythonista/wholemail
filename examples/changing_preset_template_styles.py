@@ -18,3 +18,5 @@ verification_code_email_template = BasicCodeVerificationEmailTemplate(
 					company_website_link = "company.com", # company website url
 					template_style = 1 , 
 				)
+# note that  we specified 'template_style=1'
+# Make the number represents a valid style 
