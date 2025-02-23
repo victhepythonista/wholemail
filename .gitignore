@@ -8,4 +8,6 @@ wholemail.egg-info/
 myvenv/
 test_data/
 *.devnote
-**my_email_auth.py
+.obsidian/
+*my_email_auth.py
+my_email_auth.py

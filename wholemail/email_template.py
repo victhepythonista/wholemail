@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 
 from . import html_boilerplates
 
+TEMPLATE_STYLES_AVAILABLE= [1,2]
+
 def strip_html_tags(html:str)-> str:
 	'''
 	Removes the tags from html content and return the plain text in between the tags .
