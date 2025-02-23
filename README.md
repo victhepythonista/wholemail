@@ -107,7 +107,7 @@ python -m pip install --upgrade wholemail
 -  <a href="https://jinja.palletsprojects.com/en/stable/intro/#installation" target="_blank">Jinja2</a>
 -  <a href="https://pypi.org/project/code-monger/" target="_blank"> code-monger</a>
 - smptlib - Comes with the Python Standard Library
-- bs4 - <a href="[https://pypi.org/project/code-monger/](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://pypi.org/project/beautifulsoup4/&ved=2ahUKEwjBk9Gw5dmLAxVQUaQEHSFCC3kQFnoECAgQAQ&usg=AOvVaw3asbpXIi2G3wc2fGLJ448a)" target="_blank">Beautiful soup</a> 
+- bs4 - <a href="https://pypi.org/project/beautifulsoup4/" target="_blank">Beautiful soup</a> 
 
 ### Supported emails
 
