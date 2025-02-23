@@ -1,10 +1,10 @@
 
  
-<figure  >
+<p align="center">
     <img  src="https://i.ibb.co/Vc2TxTDC/wholemail-logo300.png"
          alt="Logo">
-    <figcaption><em>: )</em></figcaption>
-</figure>
+ 
+</p>
 
 
 <div align="center">
