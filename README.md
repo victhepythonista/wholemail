@@ -20,17 +20,20 @@
 ### Generic email screenshots made and sent using  wholemail
  
  <figure  >
-  <figcaption><em>A common code verification email</em></figcaption>
+  <figcaption><em>Code verification email templates</em></figcaption>
     <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_auth_code.png"
          alt="Authentication email ( template_style = 1 ) ">
-   
+       <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style2_auth_code.png"
+         alt="Authentication email ( template_style = 1 ) ">
 </figure>
  
-  <figure  >
-   <figcaption><em>A generic email verification email</em></figcaption>
-    <img  src="https://i.ibb.co/Vc2TxTDC/wholemail-logo300.png"
-         alt="Logo">
    
+  <figure  >
+  <figcaption><em>Email verification link templates</em></figcaption>
+    <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_email_link.png"
+         alt="Authentication email ( template_style = 1 ) ">
+       <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style2_email_link.png"
+         alt="Authentication email ( template_style = 1 ) ">
 </figure>
 
 ### Installation
