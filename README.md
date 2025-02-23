@@ -8,7 +8,7 @@
 
 
 <div align="center">
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-blue.svg" alt="built with Python3"></a>
 		<a href="https://pepy.tech/projects/wholemail"><img src="https://static.pepy.tech/badge/wholemail" alt="PyPI">
 <a href="https://github.com/victhepythonista/wholemail"><img src="https://img.shields.io/github/stars/victhepythonista/wholemail.svg?style=social&label=Stars"></a>
 </div>
