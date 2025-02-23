@@ -51,7 +51,7 @@ worker = GmailEmailWorker(gmail_address, gmail_app_password )
 
  ```
  
- - Read more about GMAIL <a href=" https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
+ - Read more about GMAIL <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
  
 
 ### Generic email screenshots made and sent using  wholemail
