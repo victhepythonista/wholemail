@@ -29,7 +29,7 @@
  -   <a href="https://github.com/victhepythonista/wholemail/blob/main/CONTRIBUTE.md" target="_blank">Contributions </a> and ideas are welcome , and for Pete's sake , help me write better code .
 
 > **NOTE** :
-> - If you want to send emails via gmail, make sure you <a href="https://github.com/victhepythonista/wholemail/blob/main/help/creating_gmail_app_passwords.md" target="_blank"> set up your Gmail APP PASSWORD </a> ,  otherwise using your *NORMAL*  Gmail password ==WILL NOT== work  since  <a href=" https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">Google disabled less secure apps </a>
+> - If you want to send emails via gmail, make sure you <a href="https://github.com/victhepythonista/wholemail/blob/main/help/creating_gmail_app_passwords.md" target="_blank"> set up your Gmail APP PASSWORD </a> ,  otherwise using your *NORMAL*  Gmail password WILL NOT work  since  Google disabled less secure apps
 > After setting up your password you can use it like so :
 
 
@@ -51,6 +51,7 @@ worker = GmailEmailWorker(gmail_address, gmail_app_password )
 
  ```
  
+ - Read more about GMAIL <a href=" https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
  
 
 ### Generic email screenshots made and sent using  wholemail
