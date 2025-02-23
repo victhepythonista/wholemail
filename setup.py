@@ -9,16 +9,15 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="wholemail",
-    version="0.1.1",
-    url = "",
+    version="0.1.2",
     author="Victor Kipkemboi",
     author_email="scriptilapia@gmail.com",
     long_description =long_description,
     long_description_content_type="text/markdown",
-    description="A package for on-the-fly code generation and validation",
-    url="https://github.com/victhepythonista/code_monger",
+    description="A Python package built to facilitate easy sending of emails and other common generic functionality like sending authentication code emails.",
+    url="https://github.com/victhepythonista/wholemail",
     project_urls={
-        "Bug Tracker": "https://github.com/victhepythonista/code_monger/issues",
+        "Bug Tracker": "https://github.com/victhepythonista/wholemail/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
