@@ -1,8 +1,8 @@
 
  
 <p align="center">
-    <img  src="https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png"
-         alt="Logo">
+    ![https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png](https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png)
+       
  
 </p>
 
