@@ -17,7 +17,7 @@ def SendHelloEmail(request):
 	# continue with yur code
 
 # sending a html email
-def SendHtmlEmailoUser(request):
+def SendHtmlEmailToUser(request):
 	user_email = "JohnDoe@domain"
 	subject ="Subject is this is html"
 	message = "Alternative message"

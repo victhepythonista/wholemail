@@ -19,4 +19,4 @@ verification_code_email_template = BasicCodeVerificationEmailTemplate(
 					template_style = 1 , 
 				)
 # note that  we specified 'template_style=1'
-# Make the number represents a valid style 
+# Make sure the number represents a valid style 
