@@ -11,3 +11,4 @@ test_data/
 .obsidian/
 *my_email_auth.py
 my_email_auth.py
+wholemail.egg-info/
