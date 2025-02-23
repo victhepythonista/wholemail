@@ -9,7 +9,7 @@
 
 - Yahoo , Proton and Outlook email functionality
 - Jinja expressions inside the html content
-- More types of common generic temlates
+- More types of common generic templates
 - More template styles
 
 
