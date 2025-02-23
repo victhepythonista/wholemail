@@ -51,7 +51,7 @@ worker = GmailEmailWorker(gmail_address, gmail_app_password )
 
  ```
  
- - Read more about GMAIL <a href=" https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
+ - Read more about GMAIL <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
  
 
 ### Generic email screenshots made and sent using  wholemail
@@ -59,18 +59,18 @@ worker = GmailEmailWorker(gmail_address, gmail_app_password )
  <figure  >
   <figcaption><em>Code verification email templates</em></figcaption>
     <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_auth_code.png"
-         alt="Authentication email ( template_style = 1 ) ">
+         >
        <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style2_auth_code.png"
-         alt="Authentication email ( template_style = 1 ) ">
+          >
 </figure>
  
    
   <figure  >
   <figcaption><em>Email verification link templates</em></figcaption>
     <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_email_link.png"
-         alt="Authentication email ( template_style = 1 ) ">
+          >
        <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style2_email_link.png"
-         alt="Authentication email ( template_style = 1 ) ">
+          >
 </figure>
 
 # Getting started
