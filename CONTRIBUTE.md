@@ -1,6 +1,10 @@
 
 # Want to contribute ?
 
+- Fork or clone this repository
+- Add your features and ideas
+- Create pull requests
+
 ## Features needed
 
 - Yahoo , Proton and Outlook email functionality
