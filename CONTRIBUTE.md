@@ -1,7 +1,7 @@
 
 # Want to contribute ?
 
-## Feature needed
+## Features needed
 
 - Yahoo , Proton and Outlook email functionality
 - Jinja expressions inside the html content

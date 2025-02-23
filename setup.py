@@ -24,7 +24,7 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License"
     ],
-    packages=["code_monger"],
+    packages=["wholemail"],
     python_requires=">=3.6",
     install_requires=[
           'Jinja2', "code_monger" , "smptplib"

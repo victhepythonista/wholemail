@@ -37,6 +37,7 @@
 </figure>
 
 ### Installation
+
 ##### Windows OS installation using pip
 
 ```
@@ -136,6 +137,7 @@ sender.SendHTMLEmail( recipient , subject ,html_code , plain_message = plain_mes
 - Most importantly , it allows for customization . ie . You can add custom content and context 
 - Below is a demonstration is creating an EmailTemplate class :
 
+
 ```python
 from wholemail import EmailTemplate
 
@@ -153,6 +155,7 @@ template = EmailTemplate( html , context = context , name = "hello-email")
 
 
 - The EmailWorker class is primarily  used to send email templates and verify email codes 
+
 
 ```python
 from wholemail import GmailEmailWorker , EmailCodeVerifier , EmailTemplate
@@ -185,6 +188,7 @@ worker.SendTemplate( template , subject , recipient_email )
 - Email verification through a link sent to your email is a common practice across the web.
 - The **BasicEmailVerificationEmailTemplate** is an child of the EmailTemplate class that is made to simplify this common practice of verifying emails .
 - Below is an example of loading the template
+
 
 ```python
 from wholemail import BasicEmailVerificationEmailTemplate
@@ -420,6 +424,7 @@ template  = EmailTemplate( html_code , context  )
 # just like that, the HTML will have the required extra code 
 
 ```
+
 ## Changing preset email styles
 
 - The preset email templates can be customized by using the **template_style** key word argument.
