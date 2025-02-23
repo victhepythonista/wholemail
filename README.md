@@ -21,7 +21,7 @@
  
  <figure  >
   <figcaption><em>A common code verification email</em></figcaption>
-    <img  src="`https://github.com/victhepythonista/[wholemail]/blob/main/screenshots/style1_auth_code.png?raw=true`"
+    <img  src="`https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_auth_code.png?raw=true`"
          alt="Authentication email ( template_style = 1 ) ">
    
 </figure>
