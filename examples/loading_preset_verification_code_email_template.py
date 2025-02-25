@@ -1,16 +1,16 @@
-from wholemail import BasicCodeVerificationEmailTemplate
+from wholemail import CodeVerificationEmailTemplate
 
-# Pre-set templates like BasicEmailVerificationEmailTemplate make work easier when you want
+# Pre-set templates like EmailVerificationEmailTemplate make work easier when you want
 # to send common emails 
 # All you need is to provide some parameters and you are good to go
 
-# BasicCodeVerificationEmailTemplate is used to send an email with a code to be
+# CodeVerificationEmailTemplate is used to send an email with a code to be
 # used by the recipient for authentication purposes
 # This type of email is very common
 
 verification_code = '123' # A code to be used for authentication/verification
 
-verification_code_email_template = BasicCodeVerificationEmailTemplate(
+verification_code_email_template = CodeVerificationEmailTemplate(
 					verification_code ,
 					'JaneDoe', # reciients name
 					company_name = "Company Inc", # comapny name

@@ -1,6 +1,7 @@
 
 # Want to contribute ?
 
+- Read the code 
 - Fork or clone this repository
 - Add your features and ideas
 - Create pull requests
@@ -8,10 +9,9 @@
 ## Features needed
 
 - Yahoo , Proton and Outlook email functionality
-- Jinja expressions inside the html content
 - More types of common generic templates
-- More template styles
+- More template styles , <a href="https://github.com/victhepythonista/wholemail/blob/main/CONTRIBUTE_A_TEMPLATE.md" target="_blank"> contribute a new template here  </a>  
 
 
 
-> A guide on how to best contribute is on the way , meanwhile read my relatively well documented code . Cheers . 
+ 

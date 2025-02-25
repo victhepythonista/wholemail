@@ -1,14 +1,14 @@
-from wholemail import BasicEmailVerificationEmailTemplate , BasicCodeVerificationEmailTemplate , TEMPLATE_STYLES_AVAILABLE
+from wholemail import EmailVerificationEmailTemplate ,  CodeVerificationEmailTemplate , TEMPLATE_STYLES_AVAILABLE
 
-# Another way you can customize a pre-set template is by changing the style
-# This is done using the prameter 'template_style:int = value'
+# Another way you can customize a preset template is by changing the style
+# This is done using the parmeter 'template_style:int = value' during EmailTemplate initialization
 
 # to see the availble template styles , do this
 print(TEMPLATE_STYLES_AVAILABLE)
 
 # lets specify the style of this pre-set template
 verification_code = '123' # A code to be used for authentication/verification
-verification_code_email_template = BasicCodeVerificationEmailTemplate(
+verification_code_email_template =  CodeVerificationEmailTemplate(
 					verification_code ,
 					'JaneDoe', # reciients name
 					company_name = "Company Inc", # comapny name

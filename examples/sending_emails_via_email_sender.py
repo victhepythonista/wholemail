@@ -2,6 +2,7 @@
 from wholemail import GmailSender
 
 # to send a gmail email you can use the GmailSender class
+# REMEMBER THAT YOU MUST USE YOUR GMAIL APP PASSWORD NOT YOUR NORMAL PASSWORD
 sender = GmailSender(  "mygmail@gmail.com" , "password" )
 
 # To send a simple text based message , use the SendTextMail method like so

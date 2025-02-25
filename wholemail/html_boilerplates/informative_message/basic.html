@@ -104,12 +104,17 @@ table, td { color: #000000; } @media (max-width: 480px) { #u_content_heading_1 .
   <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
   
 <table id="u_content_heading_1" style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  {%if company_logo_link%}
+  <p  style="text-align: center;align:center;">
+    <img src="{{company_logo_link}}" alt="{{company_name}} logo"> 
+  </p>
+  {%endif%}
   <tbody>
     <tr>
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:30px 10px;font-family:arial,helvetica,sans-serif;" align="left">
         
   <!--[if mso]><table width="100%"><tr><td><![endif]-->
-    <h1 class="v-font-size" style="margin: 0px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word; font-family: 'Montserrat',sans-serif; font-size: 31px; font-weight: 400;"><span><strong>Please confirm your {{company_app}} email address<br /></strong></span></h1>
+    <h1 class="v-font-size" style="margin: 0px; color: #ffffff; line-height: 140%; text-align: center; word-wrap: break-word; font-family: 'Montserrat',sans-serif; font-size: 31px; font-weight: 400;"><span><strong>{{title}}<br /></strong></span></h1>
   <!--[if mso]></td></tr></table><![endif]-->
 
       </td>
@@ -152,10 +157,7 @@ table, td { color: #000000; } @media (max-width: 480px) { #u_content_heading_1 .
     <tr>
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:50px 35px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
         
-  <div class="v-font-size" style="font-size: 14px; color: #000000; line-height: 180%; text-align: left; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 180%; margin: 0px;"><span style="font-size: 18px; line-height: 32.4px; color: #000000;"><strong><span style="line-height: 32.4px; font-family: Montserrat, sans-serif; font-size: 18px;">Hello {{recipient_name}},</span></strong></span></p>
-<p style="font-size: 14px; line-height: 180%; margin: 0px;"><br /><span style="font-size: 16px; line-height: 28.8px; font-family: Montserrat, sans-serif;">Click the link below to verify your {{company_name}} account's email address. If you do not know about this ,you can safely ignore this message .</span> <br /><span style="font-size: 16px; line-height: 28.8px; font-family: Montserrat, sans-serif;"></span></p>
-  </div>
+ 
 
       </td>
     </tr>
@@ -179,13 +181,46 @@ table, td { color: #000000; } @media (max-width: 480px) { #u_content_heading_1 .
     <tr>
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 71px;font-family:arial,helvetica,sans-serif;" align="left">
         
-  <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
-<div align="center">
-  <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://unlayer.com" style="height:62px; v-text-anchor:middle; width:278px;" arcsize="35.5%"  stroke="f" fillcolor="#03a5ed"><w:anchorlock/><center style="color:#FFFFFF;"><![endif]-->
-    <a href="https://unlayer.com" target="_blank" class="v-button v-size-width v-font-size" style="box-sizing: border-box; display: inline-block; text-decoration: none; -moz-text-size-adjust: none; text-align: center; color: rgb(255, 255, 255); background: rgb(3, 165, 237); border-radius: 22px; width: 48%; max-width: 100%; word-break: break-word; overflow-wrap: break-word; font-size: 14px; line-height: inherit;"><span style="display:block;padding:23px 30px 22px;line-height:120%;"><strong><span style="font-size: 14px; line-height: 16.8px; font-family: Montserrat, sans-serif;">Verify email address<br /></span></strong></span>
-    </a>
-    <!--[if mso]></center></v:roundrect><![endif]-->
+
+<div class="v-font-size">
+  
+
+<div >
+  
+  {%for image_link,image_name in image_links %}
+  <p style="text-align:center;">
+    
+  <img src="{{image_link}}" alt="{{image_name}}">
+  </p>
+  <br>
+  {%endfor%}
 </div>
+
+
+</div>
+
+
+<br>
+  <div class="v-font-size" style="font-size: 14px; color: #000000; line-height: 180%; text-align: left; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 180%; margin: 0px;"><span style="font-size: 18px; line-height: 32.4px; color: #000000;"><strong><span style="line-height: 32.4px; font-family: Montserrat, sans-serif; font-size: 18px;"> </span></strong></span></p>
+<p style="font-size: 14px; line-height: 180%; margin: 0px;"><br /><span style="font-size: 16px; line-height: 28.8px; font-family: Montserrat, sans-serif;">{{message}}</span> <br /><span style="font-size: 16px; line-height: 28.8px; font-family: Montserrat, sans-serif;"></span></p>
+  </div>
+
+<div>
+  
+<p>
+  
+
+
+<br>
+<br>
+</p>
+  
+ 
+
+</div>
+  <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
+ 
 
       </td>
     </tr>
@@ -241,10 +276,10 @@ table, td { color: #000000; } @media (max-width: 480px) { #u_content_heading_1 .
       <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 50px;font-family:arial,helvetica,sans-serif;" align="left">
         
   <div class="v-font-size" style="font-size: 14px; color: #ffffff; line-height: 190%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 190%; margin: 0px;"><span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 26.6px;">If you have any questions, feel free to message us at <a rel="noopener" href="{{customer_support_link}}" target="_blank" style="color: rgb(253, 199, 27); text-decoration: underline; line-height: inherit;"><span style="text-decoration: underline; font-size: 14px; line-height: 26.6px;">Support</span>.</a>&nbsp;</span><br /> <br />
+    <p style="font-size: 14px; line-height: 190%; margin: 0px;"><span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 26.6px;">If you have any questions, feel free to message us at <a rel="noopener" href="{{customer_support_link}}" target="_blank" style="color: rgb(23, 199, 227); text-decoration: underline; line-height: inherit;"><span style="text-decoration: underline; font-size: 14px; line-height: 26.6px;">Support</span>.</a>&nbsp;</span><br /> <br />
 
       Visit our
-      <a rel="noopener" href="{{company_website_link}}" target="_blank" style="color: rgb(253, 199, 27); text-decoration: underline; line-height: inherit;"><span style="text-decoration: underline; font-size: 14px; line-height: 26.6px;">website </span></a>
+      <a rel="noopener" href="{{company_website_link}}" target="_blank" style="color: rgb(23, 199, 227); text-decoration: underline; line-height: inherit;"><span style="text-decoration: underline; font-size: 14px; line-height: 26.6px;">website </span></a>
       <br>
 
       <span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 26.6px;">{{company_phone_number}}</span><br /><span style="font-family: Montserrat, sans-serif; font-size: 14px; line-height: 26.6px;">{{company_address}}</span><br /> </p>
