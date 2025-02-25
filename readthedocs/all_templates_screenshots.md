@@ -8,7 +8,7 @@
 
 <p align="center">
 
-<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verifification_code_style1.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verification_code_style1.png" >
 
 </p>
 
@@ -61,7 +61,7 @@
 
 <p align="center">
 
-<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verifification_code_style2.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verification_code_style2.png" >
 
 </p>
 
