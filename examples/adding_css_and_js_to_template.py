@@ -1,7 +1,9 @@
 from wholemail import  FileEmailTemplate , EmailTemplate
 
 # If you require Javascript or CSS code in your EmailTemplate , 
-# you can simply add it in the context of an EmailTemplate
+# you can simply add it in the context of an EmailTemplate   
+# remember that you can also always add your own jinja expressions and blocks along with your html code 
+
 
 html_file = "myhtml.html"
 # html file contents

@@ -8,12 +8,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="wholemail",
-    version="0.1.6",
+    version="0.1.7",
     author="Victor Kipkemboi",
     author_email="scriptilapia@gmail.com",
     long_description =long_description,
     long_description_content_type="text/markdown",
-    description="A Python package built to facilitate easy sending of emails and other common generic functionality like sending authentication code emails.",
+    description="A lucid Python package built to facilitate easy sending of emails and other common generic functionality like sending authentication code emails",
     url="https://github.com/victhepythonista/wholemail",
     project_urls={
         "Bug Tracker": "https://github.com/victhepythonista/wholemail/issues",

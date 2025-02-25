@@ -1,15 +1,16 @@
 
+
  
 <p align="center">
-    <img src="https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png" > </img>
+    <img width=120 height=120 src="https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png" > </img>
  
 </p>
 
 
 <div align="center">
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-blue.svg" alt="built with Python3"></a>
-		<a href="https://pepy.tech/projects/wholemail"><img src="https://static.pepy.tech/badge/wholemail" alt="PyPI">
-<a href="https://github.com/victhepythonista/wholemail"><img src="https://img.shields.io/github/stars/victhepythonista/wholemail.svg?style=social&label=Stars"></a>
+<a href="https://www.python.org/"><img height=30  src="https://img.shields.io/badge/built%20with-Python3-blue.svg" alt="built with Python3"></a>
+		<a href="https://pepy.tech/projects/wholemail"><img height=30 src="https://static.pepy.tech/badge/wholemail" alt="PyPI">
+<a href="https://github.com/victhepythonista/wholemail"><img height=30   src="https://img.shields.io/github/stars/victhepythonista/wholemail.svg?style=social&label=Stars"></a>
 </div>
 
 
@@ -18,18 +19,88 @@
 
 # Introduction
 
--  Wholemail is a Python package built to facilitate easy sending of emails and other common generic functionality like sending authentication code emails.
-- Main features :
-			    - Easily send text-based and html emails
-				- Pre-set templates for common generic email functionality .       eg. Sending verification code emails
-				- Load , add data to ,process  and send html content from your html files
-				- Saves you the hustle of writing email sending functions
-				 - Check out the <a href="https://github.com/victhepythonista/wholemail/blob/main/RELEASE_NOTES.md" target="_blank"> release notes</a>  to stay updated on recent changes and contributions
- -   <a href="https://github.com/victhepythonista/wholemail/blob/main/CONTRIBUTE.md" target="_blank">Contributions </a> and ideas are welcome , and for Pete's sake , help me write better code .
 
-> **NOTE** :
-> - If you want to send emails via gmail, make sure you <a href="https://github.com/victhepythonista/wholemail/blob/main/help/creating_gmail_app_passwords.md" target="_blank"> set up your Gmail APP PASSWORD </a> ,  otherwise using your *NORMAL*  Gmail password WILL NOT work  since  Google disabled less secure apps
-> After setting up your password you can use it like so :
+
+-  Wholemail is a lucid Python package built to facilitate easy sending of emails and other common generic functionality like sending authentication code emails .
+- Jinja2 is used to render the HTML code , so that means you can add your own Jinja2 expressions and blocks like in the example below :
+
+
+
+
+
+```python
+from wholemail import LoadTemplate , GmailWorker
+
+worker = GmailWorker("mygmail@gmail.com" , "gmail_app_password") # will send the email
+html_text = """
+	
+	{%if won_the_prize %}
+
+		<h3>{{name}} , you won ! we'll contact you</h3>
+
+	{%else%}
+		<p>Better luck next time</p>
+	{%endif%}
+
+"""
+context = {
+	
+	"name":"JaneDoe",
+	"won_the_prize":True,
+}
+
+template = LoadTemplate(html_text = html_text , context = context )
+
+
+recipient  ,subject = "recipient@gmail.com" , "The prize"
+# send the template 
+worker.SendTemplate( template , subject ,recipient)
+
+
+
+```
+
+### An example of preset email templates for you to choose from
+ 
+ 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Office letter email example](https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/office_letter_style_1.png)  |  ![Vericfication code email example](https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verification_code_style1.png)
+ 
+
+----
+###
+
+
+#### Main features 
+
+
+ - Easily send text-based and HTML emails
+ - ***Jinja2*** expressions and blocks in your HTML code will be automatically rendered and processed
+- Preset email templates lighten your load when you need to send for common generic emails . eg OTP email
+- Create , customize and send your own email templates
+- Saves you the hustle of writing email sending functions
+
+
+##
+- Check out the <a href="https://github.com/victhepythonista/wholemail/blob/main/RELEASE_NOTES.md" target="_blank"> release notes</a>  to stay updated on recent changes and contributions
+-    More HTML templates needed , you are welcome to <a href="https://github.com/victhepythonista/wholemail/blob/main/CONTRIBUTE_A_TEMPLATE.md" target="_blank"> contribute a new HTML template  </a>  
+ -   <a href="https://github.com/victhepythonista/wholemail/blob/main/CONTRIBUTE.md" target="_blank">Contributions </a> and ideas are welcome , and for Pete's sake , help me write better code .
+- More templates on the way  
+- Here are   <a href="https://github.com/victhepythonista/wholemail/blob/main/readthedocs/all_templates_screenshots.md" target="_blank">  screenshots </a>  of all the   <a href="https://github.com/victhepythonista/wholemail/blob/main/readthedocs/about_preset_templates.md" target="_blank">    preset templates  </a>for you to choose from
+
+
+
+
+ ## **TAKE NOTE** :
+
+ #### Before using with gmail
+ 
+ - If you want to send emails via gmail, make sure you <a href="https://github.com/victhepythonista/wholemail/blob/main/help/creating_gmail_app_passwords.md" target="_blank"> set up your Gmail APP PASSWORD </a> ,  otherwise using your *NORMAL*  Gmail password WILL NOT work  since  Google disabled less secure apps
+ - Read more about GMAIL <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
+ 
+
+ After setting up your password you can use it like so 
 
 
  ```python
@@ -49,28 +120,14 @@ worker = GmailEmailWorker(gmail_address, gmail_app_password )
 
 
  ```
- 
- - Read more about GMAIL <a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank">  less secure apps </a>
- 
 
-### Generic email screenshots made and sent using  wholemail
+
+---------
+
+
+
+
  
- <figure  >
-  <figcaption><em>Code verification email templates</em></figcaption>
-    <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_auth_code.png"
-         >
-       <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style2_auth_code.png"
-          >
-</figure>
- 
-   
-  <figure  >
-  <figcaption><em>Email verification link templates</em></figcaption>
-    <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style1_email_link.png"
-          >
-       <img  src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/style2_email_link.png"
-          >
-</figure>
 
 # Getting started
 
@@ -122,9 +179,10 @@ python -m pip install --upgrade wholemail
 
 # Usage
 
-##### Contents
+#### Contents
 
 -  Sending emails via GMAIL
+- Using the **LoadTemplate** function
 -    Working with the EmailTemplate class 
 - Working with the EmailWorker class
 - Sending a generic email verification email
@@ -134,12 +192,19 @@ python -m pip install --upgrade wholemail
  - Adding Javascript and CSS code to the HTML of an EmailTemplate class
  - Changing preset email styles
 
+
+--- 
+
 ### Sending emails via GMAIL
 
-[^sending_emails_via_gmail]:
+ 
 
 - You can send html and plain text messages using the EmailSender class
 - Here is a demonstration
+
+
+
+
 
 ```python
 
@@ -166,14 +231,40 @@ sender.SendHTMLEmail( recipient , subject ,html_code , plain_message = plain_mes
 
 ```
 
-### Working with the EmailTemplate class
 
-[^working_with_the_email_template_class]:
+### Using the LoadTemplate function
+
+- One way to ceate  an **EmailTemplate** is by using the **LoadTemplate** function
+
+
+```python
+from wholemail import LoadTemplate
+
+
+# Lets create an email template class using the LoadTEmp
+# load from a file
+context = {"name":"Jane"}
+template = LoadTemplate( html_file = "myfile.html"  ,context = context)
+
+# load from text 
+template = LoadTemplate(html_text = "<h1> {{name}} </h1>" ,context = context)
+```
+
+
+
+### Working with the EmailTemplate class
+ 
 
 - The EmailTemplate class represents the email you wish to send .
 - It contains the text message or html code that will make up the email . 
 - Most importantly , it allows for customization . ie . You can add custom content and context 
+- You can also create a template using the **LoadTemplate** function
 - Below is a demonstration is creating an EmailTemplate class :
+
+
+
+
+
 
 ```python
 from wholemail import EmailTemplate
@@ -188,11 +279,18 @@ context = {"name":"EaNasir"} # context that will be inserted into the html
 template = EmailTemplate( html , context = context , name = "hello-email")
 ```
 
-### Working with the EmailWorker class
+---
 
-[^working_with_the_email_worker_class]:
+
+
+### Working with the EmailWorker class
+ 
 
 - The EmailWorker class is primarily  used to send email templates and verify email codes 
+
+
+
+
 
 ```python
 from wholemail import GmailEmailWorker , EmailCodeVerifier , EmailTemplate
@@ -219,21 +317,29 @@ recipient_email = "recipient@gmail.com" # the email of the receiver
 worker.SendTemplate( template , subject , recipient_email )
 ```
 
-### Sending a generic email verification email
+---
 
-[^sending_a_generic_email_verification_email]:
+
+### Sending a generic email verification email
+ 
 
 - Email verification through a link sent to your email is a common practice across the web.
-- The **BasicEmailVerificationEmailTemplate** is an child of the EmailTemplate class that is made to simplify this common practice of verifying emails .
+- The **EmailVerificationEmailTemplate** is an child of the EmailTemplate class that is made to simplify this common practice of verifying emails .
 - Below is an example of loading the template
+- Check out all preset templates here
+
+
+
+
+
 
 ```python
-from wholemail import BasicEmailVerificationEmailTemplate
+from wholemail import EmailVerificationEmailTemplate
 
-# Pre-set templates like BasicEmailVerificationEmailTemplate make work easier when you want
+# Pre-set templates like EmailVerificationEmailTemplate make work easier when you want
 # to send emails that involve the user clicking a link for verification purposes
 # All you need is to provide some parameters and you are good to go
-# BasicEmailVerificationEmailTemplate is used to send an email with a link for the user 
+# EmailVerificationEmailTemplate is used to send an email with a link for the user 
 # to click and verify their identity doing so 
 # The common details like the verification link , company info , company address etc can be easily inserted,
 # saving you the hustle
@@ -241,7 +347,7 @@ from wholemail import BasicEmailVerificationEmailTemplate
 verification_link = "https://company.com/verification" # The link the user will click to verify their email
 company_name = "Samsung"
 recipient_name 	= "Mark"
-email_verification_template = BasicEmailVerificationEmailTemplate(
+email_verification_template = EmailVerificationEmailTemplate(
 					recipient_name ,  # name of the recipient
 					company_name, # company name
 					verification_link , # The link for verification
@@ -264,29 +370,33 @@ worker = GmailEmailWorker(my_email , email_password , storage_folder = storage_f
 worker.SendTemplate( template , "Email subject "  , "recipient@gmail.com")
 ``` 
 
+---
+
+
+
 ###  Sending a generic authentication code email
 
-[^sending_generic_auth_code_email]:
+ 
 
 - Another common email is the verification code or one-time-password (OTP) email 
 - They are mostly used to authenticate an action on a website or a sign up process
-- The **BasicCodeVerificationEmailTemplate** class was built to make sending verification code emails much easier
+- The **CodeVerificationEmailTemplate** class was built to make sending verification code emails much easier
 - Here is an example of loading and sending the template
 
 ```python
-from wholemail import BasicCodeVerificationEmailTemplate
+from wholemail import CodeVerificationEmailTemplate
 
-# Pre-set templates like BasicEmailVerificationEmailTemplate make work easier when you want
+# Pre-set templates like EmailVerificationEmailTemplate make work easier when you want
 # to send common emails 
 # All you need is to provide some parameters and you are good to go
 
-# BasicCodeVerificationEmailTemplate is used to send an email with a code to be
+# CodeVerificationEmailTemplate is used to send an email with a code to be
 # used by the recipient for authentication purposes
 # This type of email is very common
 
 verification_code = '123' # A code to be used for authentication/verification
 
-verification_code_email_template = BasicCodeVerificationEmailTemplate(
+verification_code_email_template = CodeVerificationEmailTemplate(
 					verification_code ,
 					'JaneDoe', # reciients name
 					company_name = "Company Inc", # comapny name
@@ -307,18 +417,26 @@ worker = GmailEmailWorker(my_email , email_password , storage_folder = storage_f
 worker.SendTemplate( template , "Email subject "  , "recipient@gmail.com")
 ```
 
-Here is the result of the email sent 
+
+
+---
+
+
 
 ### Using the  EmailWorker to authenticate codes
 
-[^using_EmailWorker_to_authenticate_codes]:
+ 
 
 - If you wish to generate and authenticate codes sent to user emails , the EmailWorker class can be used to do so.
 - Here is an example
 
+
+
+
+
 ```python
 
-from wholemail import GmailEmailWorker , EmailCodeVerifier , BasicCodeVerificationEmailTemplate
+from wholemail import GmailEmailWorker , EmailCodeVerifier , CodeVerificationEmailTemplate
 
 # This is a demonstration of how to verify codes using the EmailWorker class
 # We will use the GmailWorkerClass for this demo
@@ -349,7 +467,7 @@ code = verifier.MakeNewCode(recipient_email)
 
 
 # create and add the preset template made for code verification
-template = BasicCodeVerificationEmailTemplate(
+template = CodeVerificationEmailTemplate(
 					code , # A code to be used for authentication
 					'JaneDoe', # reciients name
 					company_name = "Company Inc", # comapny name
@@ -369,11 +487,16 @@ is_valid_code = worker.VerifyCode(code)
 # do something with the result
 ```
 
+
+---
+
+
 ### Using in a Django view
 
-[^using_wholemail_in_django]:
 
 - If you use the Django framework, here is an example of using the wholemail library in a view .
+
+
 
 ```python
 # This is a demonstration of using wholemail in djnago
@@ -403,10 +526,16 @@ def SendHtmlEmailToUser(request):
 	# continue with yur code
 ```
 
+---
+
+
+
 
 ### Adding Javascript and CSS code to the HTML of an EmailTemplate class
 
 - If you can't write your Javascript and CSS in a html file and load it with a FileEmailTemplate , you can try using this method .
+
+
 
 ```python
 from wholemail import  FileEmailTemplate , EmailTemplate
@@ -465,14 +594,22 @@ template  = EmailTemplate( html_code , context  )
 
 ```
 
-## Changing preset email styles
+
+---
+
+
+### Changing preset email styles
+
 
 - The preset email templates can be customized by using the **template_style** key word argument.
 - This only works on preset templates , ***not*** **FileEmailTemplate** or **EmailTemplate**
 - Here is an example :
 
+
+
+
 ```python
-from wholemail import BasicEmailVerificationEmailTemplate , BasicCodeVerificationEmailTemplate , TEMPLATE_STYLES_AVAILABLE
+from wholemail import EmailVerificationEmailTemplate , CodeVerificationEmailTemplate , TEMPLATE_STYLES_AVAILABLE
 
 # Another way you can customize a pre-set template is by changing the style
 # This is done using the prameter 'template_style:int = value'
@@ -482,7 +619,7 @@ print(TEMPLATE_STYLES_AVAILABLE)
 
 # lets specify the style of this pre-set template
 verification_code = '123' # A code to be used for authentication/verification
-verification_code_email_template = BasicCodeVerificationEmailTemplate(
+verification_code_email_template = CodeVerificationEmailTemplate(
 					verification_code ,
 					'JaneDoe', # reciients name
 					company_name = "Company Inc", # comapny name

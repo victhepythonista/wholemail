@@ -1,5 +1,5 @@
 
-from wholemail import GmailEmailWorker , EmailCodeVerifier , BasicCodeVerificationEmailTemplate
+from wholemail import GmailEmailWorker , EmailCodeVerifier , CodeVerificationEmailTemplate
 
 # This is a demonstration of how to verify codes using the EmailWorker class
 # We will use the GmailWorkerClass for this demo
@@ -30,7 +30,7 @@ code = verifier.MakeNewCode(recipient_email)
 
 
 # create and add the preset template made for code verification
-template = BasicCodeVerificationEmailTemplate(
+template = CodeVerificationEmailTemplate(
 					code , # A code to be used for authentication
 					'JaneDoe', # reciients name
 					company_name = "Company Inc", # comapny name

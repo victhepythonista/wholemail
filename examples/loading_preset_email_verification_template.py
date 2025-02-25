@@ -1,9 +1,9 @@
-from wholemail import BasicEmailVerificationEmailTemplate
+from wholemail import EmailVerificationEmailTemplate
 
-# Pre-set templates like BasicEmailVerificationEmailTemplate make work easier when you want
+# Pre-set templates like EmailVerificationEmailTemplate make work easier when you want
 # to send emails that involve the user clicking a link for verification purposes
 # All you need is to provide some parameters and you are good to go
-# BasicEmailVerificationEmailTemplate is used to send an email with a link for the user 
+# EmailVerificationEmailTemplate is used to send an email with a link for the user 
 # to click and verify their identity doing so 
 # The common details like the verification link , company info , company address etc can be easily inserted,
 # saving you the hustle
@@ -11,7 +11,7 @@ from wholemail import BasicEmailVerificationEmailTemplate
 verification_link = "https://company.com/verification" # The link the user will click to verify their email
 company_name = "Samsung"
 recipient_name 	= "Mark"
-email_verification_template = BasicEmailVerificationEmailTemplate(
+email_verification_template = EmailVerificationEmailTemplate(
 					recipient_name ,  # name of the recipient
 					company_name, # company name
 					verification_link , # The link for verification
