@@ -28,9 +28,11 @@ AND **MUST** be of the expected theme . ie in the folder **email_verification** 
 The html files must contain valid jinja variable blocks that reflect with the needed class parameters . eg {{city}}  in the html file matches the parameter 'city='New York' in the __init__ function of your class 
 It's painstaking at first but easy as you go on 
 
-- In **email_template.py** create a class in the email_template.py class that inherits from PresetEmailTemplate
+- In **email_template.py** create a  class that inherits from PresetEmailTemplate
 - Make sure  the class name  ends with 'EmailTemplate' ( for practicality and namespacing )
 - Make sure to include this part during initialization
+
+
 ```python
 html_file = pre_set_email_templates.YOUR_TEMPLATE[template_style]
 		PresetEmailTemplate.__init__(self, html_file , name = "Preset-code-verification-template")

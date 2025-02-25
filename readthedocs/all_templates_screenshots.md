@@ -8,7 +8,7 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verifification_code_style1.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verifification_code_style1.png" >
 
 </p>
 
@@ -16,8 +16,8 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style1_partA.png" >
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style1_partB.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style1_partA.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style1_partB.png" >
 
 </p>
 
@@ -26,7 +26,7 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/office_letter_style_1.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/office_letter_style_1.png" >
 
 </p>
 
@@ -34,7 +34,7 @@
 #### ResetPasswordLinkTemplate
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/reset_password_style1.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/reset_password_style1.png" >
 
 </p>
 
@@ -42,7 +42,7 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/email_verification_style1.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/email_verification_style1.png" >
 
 </p>
 
@@ -61,7 +61,7 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verifification_code_style2.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verifification_code_style2.png" >
 
 </p>
 
@@ -69,8 +69,8 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style2_partA.png" >
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style2_partB.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style2_partA.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/informative_message_style2_partB.png" >
 
 </p>
 
@@ -79,7 +79,7 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/office_letter_style2.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/office_letter_style2.png" >
 
 </p>
 
@@ -87,7 +87,7 @@
 #### ResetPasswordLinkTemplate
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/reset_password_style2.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/reset_password_style2.png" >
 
 </p>
 
@@ -95,6 +95,6 @@
 
 <p align="center">
 
-	<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/email_verification_style2.png" >
+<img src="https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/email_verification_style2.png" >
 
 </p>
