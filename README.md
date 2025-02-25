@@ -63,7 +63,7 @@ worker.SendTemplate( template , subject ,recipient)
 ### An example of preset email templates for you to choose from
  
  
-Solarized dark             |  Solarized Ocean
+Office letter template     |  Verificaton code template
 :-------------------------:|:-------------------------:
 ![Office letter email example](https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/office_letter_style_1.png)  |  ![Vericfication code email example](https://github.com/victhepythonista/wholemail/blob/main/screenshots/email_templates/verification_code_style1.png)
  
