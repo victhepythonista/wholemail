@@ -23,7 +23,7 @@ from tests.data_for_tests import *
 
 test_sender = GmailSender(GMAIL_EMAIL , GMAIL_APP_PASSWORD )
 
-class Test_GmailSending(TestCase):
+class Test_send_Email_using_GmailSender(TestCase):
 	'''
 	Test functionalities of the GmailEmailWOrker class. ie test sending emails via gmail
 	'''

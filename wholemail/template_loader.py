@@ -56,8 +56,9 @@ def LoadTemplate( html_text = "" , html_file = ""  , context ={}  , name = Email
 					html_file_content = f.read()
 			except (FileNotFoundError , PermissionError ) as e:
 				print(f"Error reading file {html_file} , skipping file read")
-				
-
+	if not html_text and not html_file:
+		# raise an error	
+		raise EmailTemplateLoadingError("Please specify a file or text content for the email template")
 	# select which content to use
 	if html_file_content and html_text:
 		html_content = html_file_content

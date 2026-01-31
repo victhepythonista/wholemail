@@ -3,7 +3,7 @@ import string , unittest
 
 from unittest import TestCase
 
-from code_generator import CodeGenerator , generate_code
+from wholemail.code_generator import CodeGenerator , generate_code
 
 
 class TestCodeGeneration(TestCase):

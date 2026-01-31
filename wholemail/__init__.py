@@ -3,7 +3,7 @@ from .email_template import EmailTemplate , FileEmailTemplate , TEMPLATE_STYLES_
 from .email_template import CodeVerificationEmailTemplate, EmailVerificationEmailTemplate 
 from .email_template import ResetPasswordLinkEmailTemplate , InformativeMessageEmailTemplate , OfficeLetterEmailTemplate
 from .email_worker import EmailWorker , GmailEmailWorker
-from .email_sender import EmailSender , GmailSender
+from .email_sender import EmailSender,GmailSender
 from .email_code_verifier import EmailCodeVerifier
 from .template_loader import LoadTemplate
 from .exceptions import EmailTemplateLoadingError
@@ -23,3 +23,4 @@ __all__ = [
 	'TEMPLATE_STYLES_AVAILABLE',
 
 	]
+

@@ -1,11 +1,9 @@
-
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.message import EmailMessage
 
-
-
+ 
 
 class EmailSender:
 	'''
@@ -17,9 +15,16 @@ class EmailSender:
 		Email address to use when sending emails
 	password:str
 		Password to the email
+	raise_exceptions:bool
+		Whether or not rasie encountered exceptions 
 	'''
 
-	def __init__(self , email , password):
+	def __init__(
+			self ,
+			email:str ,
+			password:str, 
+			raise_exceptions:bool = False 
+			):
 		'''
 		Parameters
 		----------
@@ -27,10 +32,12 @@ class EmailSender:
 			Email address to use when sending emails
 		password:str
 			Password to the email
+		raise_exceptions:bool
 		'''
 
 		self.email = email 
 		self.password = password
+		self.raise_exceptions = raise_exceptions
 
  
 	 
@@ -70,15 +77,18 @@ class GmailSender(EmailSender):
 
 	'''
 
-	def __init__(self , email:str , password:str):
+	def __init__(
+			self,
+			email:str ,
+			password:str ,
+			raise_exceptions:bool = False):
 		'''
 		email:str
 			Email address to use when sending emails
 		password:str
 			The Gmail app Password to the gmail account
 		'''
-		EmailSender.__init__(self , email , password)
-
+		EmailSender.__init__(self , email , password ,raise_exceptions)
 
 	def SendHTMLEmail(self ,recipient:str, subject:str , html:str, plain_message:str = "" ) -> bool:
 		'''
@@ -102,31 +112,34 @@ class GmailSender(EmailSender):
 			True if the email is sent successfully ,else False
 
 		'''
-		print("Preparing to send HTML message to {} from sender {}. [PASSWORD = {} ]".format(recipient, self.email , self.password[:3] + ("*"*(len(self.password)-3))))
-		port = 465  # For SSL
-		# Create a secure SSL context
-		# strip the tags from the html if the plain_message is not present
-		message = MIMEMultipart("alternative")
-		message["Subject"] = subject
-		message["From"] = self.email
-		message["To"] = recipient
-		# load the html and plain messages as  MIMEText objects
-		part1 = MIMEText(plain_message, "plain")
-		part2 = MIMEText(html, "html")
-		# Add HTML/plain-text parts to MIMEMultipart message
-		# The email client will try to render the last part first
-		message.attach(part1)
-		message.attach(part2)
-		context = ssl.create_default_context()
-		with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-			try:
-				server.login(self.email ,self.password)
-				server.sendmail(self.email , recipient ,message.as_string())
-				return True
-			except Exception as e:
-				raise
-		return False
 
+
+		# Create the email message
+		msg = MIMEMultipart('alternative')
+		msg['From'] = self.email
+		msg['To'] = recipient
+		msg['Subject'] = subject
+
+		# Attach the HTML content
+		msg.attach(MIMEText(html, 'html'))
+
+		# Send the email
+		try:
+		    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+		        server.starttls()  # Upgrade the connection to a secure one
+		        server.login(self.email , self.password)
+		        server.send_message(msg)
+		        
+		    print(f"Email [{subject}] sent successfully!")
+		    return True 
+		except Exception as e:
+			if self.raise_exceptions:
+				raise e  
+			print(f"Failed to send email: {e}")
+			return False
+
+		return False 
+ 
 
 	def SendTextEmail(self , recipient:str, subject:str , message:str ) -> bool:
 		'''
@@ -148,20 +161,21 @@ class GmailSender(EmailSender):
 
 		'''
 
-		msg = EmailMessage()
+		msg = MIMEText(message)
 		msg['Subject'] = subject
 		msg['From'] =self.email
 		msg['To'] = recipient
-		msg.set_content(message)
 		print("Preparing to send a text based message to {} from sender {}. [PASSWORD = {} ]".format(recipient, self.email , self.password[:3] + ("*"*(len(self.password)-3))))
-		port = 465  # For SSL
-		# Create a secure SSL context
-		context = ssl.create_default_context()
-		with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-			try:
-				server.login(self.email ,self.password)
+		port = 587
+		try:
+			with smtplib.SMTP('smtp.gmail.com', 587) as server:
+				server.starttls()  # Upgrade the connection to a secure one
+				server.login(self.email , self.password)
 				server.send_message(msg)
+				print(f"EMail [{subject}] sent ! ")
 				return True
-			except Exception as e:
-				raise
+		except Exception as e:
+			if self.raise_exceptions:
+				print("Could not send email ")
+				raise e 
 		return False
