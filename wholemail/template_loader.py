@@ -33,25 +33,31 @@ def LoadTemplate( html_text = "" , html_file = ""  , context ={}  , name = Email
 	'''
 
 	# chec the html file
-	if not os.path.isfile(html_file):
-		try:
-			folder , file = os.path.split(html_file)
-			if not os.path.isdir(folder):
-				# make the folder since its not there
-				os.makedirs(folder)
-				# make the html file
-			with open(html_file , "w" , encoding ='utf-8') as f:
-				f.write("")
-
-		except FileNotFoundError:
-			raise EmailTemplateLoadingError("The file could not be found or created")
-		except Exception as e:
-			raise EmailTemplateLoadingError("Could not load the template html content because of {}".format(e))
-	
 	html_content = ""
 	html_file_content = ""
-	with open(html_file , "r" , encoding ="utf-8") as f:
-		html_file_content = f.read()
+	if html_file:
+		if not os.path.isfile(html_file):
+			try:
+				folder , file = os.path.split(html_file)
+				if not os.path.isdir(folder):
+					# make the folder since its not there
+					os.makedirs(folder)
+					# make the html file
+				with open(html_file , "w" , encoding ='utf-8') as f:
+					f.write("")
+
+			except FileNotFoundError:
+				raise EmailTemplateLoadingError("The file could not be found or created")
+			except Exception as e:
+				raise EmailTemplateLoadingError("Could not load the template html content because of {}".format(e))
+		else:
+			try:
+				with open(html_file , "r" , encoding ="utf-8") as f:
+					html_file_content = f.read()
+			except (FileNotFoundError , PermissionError ) as e:
+				print(f"Error reading file {html_file} , skipping file read")
+				
+
 	# select which content to use
 	if html_file_content and html_text:
 		html_content = html_file_content
