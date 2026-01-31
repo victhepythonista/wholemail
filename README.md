@@ -8,9 +8,17 @@
 
 
 <div align="center">
+
+
+
 <a href="https://www.python.org/"><img height=30  src="https://img.shields.io/badge/built%20with-Python3-blue.svg" alt="built with Python3"></a>
 		<a href="https://pepy.tech/projects/wholemail"><img height=30 src="https://static.pepy.tech/badge/wholemail" alt="PyPI">
 <a href="https://github.com/victhepythonista/wholemail"><img height=30   src="https://img.shields.io/github/stars/victhepythonista/wholemail.svg?style=social&label=Stars"></a>
+
+
+![](https://img.shields.io/badge/build-passing-0EA711?style=for-the-badge) 
+
+
 </div>
 
 
