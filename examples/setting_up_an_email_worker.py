@@ -3,7 +3,7 @@ from wholemail import GmailEmailWorker , EmailCodeVerifier , EmailTemplate
 # In this demonstration  ,  we will use the GmailEmailWorker
 storage_folder = "data/"
 my_email = "myemail@gmail.com"
-email_password = "dfujsdfv"
+email_password = "dfujsdfv" # use your GMAIL APP PASSWORD
 
 # initialize the worker object
 worker = GmailEmailWorker(my_email , email_password , storage_folder = storage_folder)

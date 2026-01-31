@@ -7,7 +7,7 @@
 - fixed the bug in sending gmail emails
 - Added *raise_exceptions* parameter to EmailSender
 
-    
+
 
 -------------------------------------------------------------------------------
 
