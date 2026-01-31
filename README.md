@@ -16,7 +16,7 @@
 <a href="https://github.com/victhepythonista/wholemail"><img height=30   src="https://img.shields.io/github/stars/victhepythonista/wholemail.svg?style=social&label=Stars"></a>
 
 
-![](https://img.shields.io/badge/build-passing-0EA711?style=for-the-badge) 
+![](https://img.shields.io/badge/TESTS-passing-0EA711?style=for-the-badge) 
 
 
 </div>
