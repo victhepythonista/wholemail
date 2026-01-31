@@ -23,7 +23,7 @@ from wholemail import CodeVerificationEmailTemplate , GmailSender , TemplateStyl
 from wholemail import ResetPasswordLinkEmailTemplate , OfficeLetterEmailTemplate , InformativeMessageEmailTemplate , EmailVerificationEmailTemplate
 from my_email_auth import GMAIL_EMAIL , GMAIL_APP_PASSWORD , TEST_RECIPIENT
 
-test_sender = GmailSender(GMAIL_EMAIL , GMAIL_APP_PASSWORD )
+test_sender = GmailSender(GMAIL_EMAIL , GMAIL_APP_PASSWORD ,raise_exceptions = True )
 template_style = TemplateStyles.japanese_indigo
 test_company_logo_link = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kermit_puppet.jpg/330px-Kermit_puppet.jpg' 
 "https://i.ibb.co/q3tdgSsM/wholemail-new-logo.png"

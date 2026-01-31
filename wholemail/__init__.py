@@ -9,6 +9,7 @@ from .template_loader import LoadTemplate
 from .exceptions import EmailTemplateLoadingError
 from .template_styles import TemplateStyles , TEMPLATE_STYLES_AVAILABLE
 
+
 __all__ = [
 	"EmailTemplateLoadingError",
 	"EmailCodeVerifier",
@@ -23,4 +24,6 @@ __all__ = [
 	'TEMPLATE_STYLES_AVAILABLE',
 
 	]
+
+
 

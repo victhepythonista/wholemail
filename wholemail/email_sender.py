@@ -91,6 +91,7 @@ class GmailSender(EmailSender):
 		EmailSender.__init__(self , email , password ,raise_exceptions)
 
 	def SendHTMLEmail(self ,recipient:str, subject:str , html:str, plain_message:str = "" ) -> bool:
+
 		'''
 		Sends an html email to the provided recipient
 		
@@ -98,7 +99,7 @@ class GmailSender(EmailSender):
 		----------
 		recipients:str
 			email address to receive the email .
-		subject:str
+		subject:str  
 			The subject of the email to be sent .
 		html:
 			The html code to send 
